@@ -1,0 +1,152 @@
+body {
+    padding: 20px;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* page title */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* form block */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* text input field */
+form input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* submit (Add) button inside the form */
+form button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* select box for added pairs */
+#containerWithCheckBox {
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    margin: 20px auto;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* container for the bottom action buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* style for sort/delete buttons */
+.buttons button {
+    flex: 1 1 30%;
+    min-width: 120px;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    background-color: #2196F3;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #1976D2;
+}
+
+/* delete button override */
+#deleteItemsBtn {
+    background-color: #f32121;
+}
+
+#deleteItemsBtn:hover {
+    background-color: #d21919;
+}
+
+/* adaptive layout for medium screens (tablets) */
+@media (max-width: 768px) {
+    form, #containerWithCheckBox, .buttons {
+        max-width: 90%;
+    }
+
+    .buttons button {
+        flex: 1 1 45%;
+    }
+}
+
+/* adaptive layout for small screens (phones) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 14px;
+    }
+
+    form input[type="text"],
+    form button,
+    .buttons button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #containerWithCheckBox {
+        height: 180px;
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}

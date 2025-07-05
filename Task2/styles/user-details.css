@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#userDetailsDiv {
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#postOfUserBtn {
+    width: 90%;
+    padding: 10px 0 10px 0;
+}
+
+#postOfUserBtn:hover {
+    cursor: pointer;
+}
+
+#listOfPostTitles {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    list-style: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#listOfPostTitles > * {
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+#listOfPostTitles > *:hover {
+    background-color: #cfcfcf;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#listOfPostTitles > * > a {
+    text-decoration: none;
+}
